@@ -19,9 +19,6 @@ public class BookControllerRest {
 	@Autowired
 	private BookRepository repository;
 	
-	@Autowired
-	private CategoryRepository cRepository;
-	
 	@RequestMapping(value="/booksRest", method = RequestMethod.GET)
 	public List<Book> book() {
 		return (List<Book>) repository.findAll();
